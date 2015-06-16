@@ -13,6 +13,30 @@ objectClass: organizationalunit
 objectClass: top
 ou: People
 
+dn: ou=Department,dc=contacts,dc=heigvd,dc=ch
+objectClass: organizationalunit
+objectClass: top
+ou: Department
+
+dn: ou=Groups,dc=contacts,dc=heigvd,dc=ch
+objectClass: organizationalunit
+objectClass: top
+ou: Groups
+
+dn: cn=DptTIN,ou=Groups,dc=contacts,dc=heigvd,dc=ch
+cn: DptTIN
+objectClass: top
+objectClass: groupOfURLs
+ou: Groups
+memberURL: ldap:///ou=People,dc=contacts,dc=heigvd,dc=ch??sub?departmentNumber=TIN
+
+dn: cn=StdA,ou=Groups,dc=contacts,dc=heigvd,dc=ch
+cn: StdA
+objectClass: top
+objectClass: groupOfURLs
+ou: Groups
+memberURL: ldap:///ou=People,dc=contacts,dc=heigvd,dc=ch??sub?sn=A*
+
 dn: uid=john.doe, ou=People,dc=contacts,dc=heigvd,dc=ch
 objectClass: top
 objectClass: person
@@ -20,7 +44,37 @@ objectClass: organizationalPerson
 objectClass: inetOrgPerson
 uid: john.doe
 givenName: John
-sn: Doe
+sn:Anonym Doe
 cn: John Doe
+employeeType: Etudiant
+departmentNumber:TIN
 mail: john.doe@example.com
+userPassword: password
+
+dn: uid=james.nolan, ou=People,dc=contacts,dc=heigvd,dc=ch
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: james.nolan
+givenName: James
+sn: Nolan
+cn: Jim Nolan
+employeeType: Etudiant
+departmentNumber: TIC
+mail: jim.nolan@example.com
+userPassword: password
+
+dn: uid=eduardo.sanchez, ou=People,dc=contacts,dc=heigvd,dc=ch
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: eduardo.sanchez
+givenName: Eduardo
+sn: Sanchez
+cn: Prof. E. Sanchez
+employeeType: Directeur
+departmentNumber: TIC
+mail: eduardo.sanchez@example.com
 userPassword: password
