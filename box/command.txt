@@ -1,0 +1,29 @@
+
+attention recopié du tableau/projo
+ldif
+import-ldif -h localhost -p 1234 dc="heigvd","ch" -l /vagrant/user.ldif -R /vagrant/rejected.ldif --skipFile /vargtant/skipped.ldif
+
+search
+ldapsearch -D cn= directory -b "heigvd" 
+
+delete
+ldapdelete -D cn="Directory manager" -x "ou=people, dc=heigvd, dc=ch" 
+
+générer le ldif correctement selon modèle annexe, puis importation.
+
+IMPROTATION LDIF (true reality)
+sudo /opt/opendj/bin/import-ldif -h localhost -p 4444 -b dc=heigvd,dc=ch -l /vagrant/users.ldif -R /vagrant/rejected.ldif --skipFile /vagrant/skipped.ldif
+
+Commandes du labos:
+à réécrire, cf slides LDAP p 36 et suivantes
+
+Compter les noeuds.
+
+Ne marche pas.
+option --countEntries
+
+Fonctionne:
+ ./ldapsearch -p 389 -b "dc=heigvd, dc=ch" "objectClass=OrganizationalUnit" numsubordinates
+
+ ./ldapsearch -p 389 -b "dc=heigvd, dc=ch" "ou=Department" numsubordinates
+ ./ldapsearch -p 389 -b "dc=heigvd, dc=ch" "ou=People" numsubordinates
