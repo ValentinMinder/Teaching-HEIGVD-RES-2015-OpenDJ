@@ -35,7 +35,7 @@ cn: StdA
 objectClass: top
 objectClass: groupOfURLs
 ou: Groups
-memberURL: ldap:///ou=People,dc=contacts,dc=heigvd,dc=ch??sub?sn=A*
+memberURL: ldap:///ou=People,dc=contacts,dc=heigvd,dc=ch??sub?(&(sn=A*)(employeeType=Etudiant))
 
 dn: uid=john.doe, ou=People,dc=contacts,dc=heigvd,dc=ch
 objectClass: top

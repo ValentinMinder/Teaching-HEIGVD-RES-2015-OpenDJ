@@ -23,7 +23,7 @@ ou: Groups
 memberURL: ldap:///ou=People,dc=heigvd,dc=ch??sub?departmentNumer=TIN
 
 // What command do you run to get the list of all members of the TIN Department
-./ldapsearch -p 389 -b "dc=heigvd,dc=ch" "(isMemberOf=cn=DptTIN,ou=Groups,dc=heigcd,dc=ch)" cn
+./ldapsearch -p 389 -b "dc=heigvd,dc=ch" "(isMemberOf=cn=DptTIN,ou=Groups,dc=heigvd,dc=ch)" cn
 
 // What command do you run to define a dynamic group that represents all students with a last name starting with the letter 'A'?
 dn: cn=StdA,ou=Groups,dc=heigvd,dc=ch
@@ -34,4 +34,4 @@ ou: Groups
 memberURL: ldap:///ou=People,dc=heigvd,dc=ch??sub?sn=A*
 
 // What command do you run to get the list of these students?
-./ldapsearch -p 389 -b "dc=heigvd,dc=ch" "(isMemberOf=cn=StdA,ou=Groups,dc=heigcd,dc=ch)" cn
+./ldapsearch -p 389 -b "dc=heigvd,dc=ch" "(isMemberOf=cn=StdA,ou=Groups,dc=heigvd,dc=ch)" cn
