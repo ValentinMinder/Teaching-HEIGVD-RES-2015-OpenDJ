@@ -1,0 +1,155 @@
+dn: dc=heigvd,dc=ch
+objectClass: domain
+objectClass: top
+dc: heigvd
+
+dn: dc=contacts,dc=heigvd,dc=ch
+objectClass: domain
+objectClass: top
+dc: contacts
+
+dn: ou=People,dc=contacts,dc=heigvd,dc=ch
+objectClass: organizationalunit
+objectClass: top
+ou: People
+
+dn: ou=Departments,dc=contacts,dc=heigvd,dc=ch
+objectClass: organizationalunit
+objectClass: top
+ou: Departments
+
+dn: ou=Groups,dc=contacts,dc=heigvd,dc=ch
+objectClass: organizationalunit
+objectClass: top
+ou: Groups
+
+dn: uid=EID_100001,ou=People,dc=contacts,dc=heigvd,dc=ch
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: EID_100001
+sn: Dupond
+givenName: Luc
+cn: Luc Dupond
+mail: luc.dupond@heig-vd.ch
+departmentNumber: HEG
+employeeType: Etudiant
+
+dn: uid=EID_100002,ou=People,dc=contacts,dc=heigvd,dc=ch
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: EID_100002
+sn: Bauer
+givenName: Charles
+cn: Charles Bauer
+mail: charles.bauer@heig-vd.ch
+departmentNumber: HEG
+employeeType: Professeur
+
+dn: uid=EID_100003,ou=People,dc=contacts,dc=heigvd,dc=ch
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: EID_100003
+sn: Durant
+givenName: Fabienne
+cn: Fabienne Durant
+mail: fabienne.durant@heig-vd.ch
+departmentNumber: TIC
+employeeType: Professeur
+
+dn: uid=EID_100004,ou=People,dc=contacts,dc=heigvd,dc=ch
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: EID_100004
+sn: Bauer
+givenName: Emil
+cn: Emil Bauer
+mail: emil.bauer@heig-vd.ch
+departmentNumber: TIN
+employeeType: Administratif
+
+dn: uid=EID_100005,ou=People,dc=contacts,dc=heigvd,dc=ch
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: EID_100005
+sn: De Decker
+givenName: Carine
+cn: Carine De Decker
+mail: carine.de decker@heig-vd.ch
+departmentNumber: COMEM
+employeeType: Administratif
+
+dn: uid=EID_100006,ou=People,dc=contacts,dc=heigvd,dc=ch
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: EID_100006
+sn: Delon
+givenName: Guillaume
+cn: Guillaume Delon
+mail: guillaume.delon@heig-vd.ch
+departmentNumber: TIC
+employeeType: Administratif
+
+dn: uid=EID_100007,ou=People,dc=contacts,dc=heigvd,dc=ch
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: EID_100007
+sn: Smith
+givenName: Guillaume
+cn: Guillaume Smith
+mail: guillaume.smith@heig-vd.ch
+departmentNumber: TIC
+employeeType: Administratif
+
+dn: uid=EID_100008,ou=People,dc=contacts,dc=heigvd,dc=ch
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: EID_100008
+sn: Durant
+givenName: Fabien
+cn: Fabien Durant
+mail: fabien.durant@heig-vd.ch
+departmentNumber: EC
+employeeType: Professeur
+
+dn: uid=EID_100009,ou=People,dc=contacts,dc=heigvd,dc=ch
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: EID_100009
+sn: Clément
+givenName: Henriette
+cn: Henriette Clément
+mail: henriette.clement@heig-vd.ch
+departmentNumber: HEG
+employeeType: Etudiant
+
+dn: uid=EID_100010,ou=People,dc=contacts,dc=heigvd,dc=ch
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: EID_100010
+sn: Dupont
+givenName: Fabrice
+cn: Fabrice Dupont
+mail: fabrice.dupont@heig-vd.ch
+departmentNumber: TIC
+employeeType: Etudiant
+
