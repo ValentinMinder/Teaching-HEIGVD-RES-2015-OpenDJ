@@ -2,7 +2,7 @@
 ./ldapsearch -p 389 -b "dc=heigvd, dc=ch" "ou=People" numsubordinates
 
 // What is the number of departments stored in the directory?
-./ldapsearch -p 389 -b "dc=heigvd, dc=ch" "ou=Department" numsubordinates
+./ldapsearch -p 389 -b "dc=heigvd, dc=ch" "(&(objectClass=OrganizationalUnit)(ou=Departments))" numsubordinates
 
 // What is the list of people who belong to the TIC Department?
 ./ldapsearch -p 389 -b "dc=heigvd,dc=ch" "departmentNumber=TIC" cn
@@ -13,7 +13,6 @@
 // What is the list of students in the TIC Department?
 ./ldapsearch -p 389 -b "dc=heigvd,dc=ch" "(&(employeeType=Etudiant)(departmentNumber=TIC))" cn
 
-
 // What command do you run to define a dynamic group that represents all members of the TIN Department?
 dn: cn=DptTIN,ou=Groups,dc=heigvd,dc=ch
 cn: DptTIN
@@ -23,7 +22,7 @@ ou: Groups
 memberURL: ldap:///ou=People,dc=heigvd,dc=ch??sub?departmentNumer=TIN
 
 // What command do you run to get the list of all members of the TIN Department
-./ldapsearch -p 389 -b "dc=heigvd,dc=ch" "(isMemberOf=cn=DptTIN,ou=Groups,dc=heigvd,dc=ch)" cn
+./ldapsearch -p 389 -b "dc=heigvd,dc=ch" "(isMemberOf=cn=DptTIN,ou=Departments,dc=contacts, dc=heigvd,dc=ch)" cn
 
 // What command do you run to define a dynamic group that represents all students with a last name starting with the letter 'A'?
 dn: cn=StdA,ou=Groups,dc=heigvd,dc=ch
